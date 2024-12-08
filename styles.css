@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+
+body {
+    font-family: 'VT323', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 100%);
+    padding: 20px;
+    color: #2d3436;
+}
+
+.container {
+    background: #fff;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 0 #2d3436, 0 15px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 600px;
+    border: 3px solid #2d3436;
+    position: relative;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    text-shadow: 3px 3px 0 #4ecdc4;
+    letter-spacing: 2px;
+}
+
+.textarea-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+textarea {
+    width: 90%;
+    height: 150px;
+    padding: 1rem;
+    border: 3px solid #2d3436;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: 'VT323', monospace;
+    resize: none;
+    transition: all 0.3s ease;
+    background: #f8f9fa;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4ecdc4;
+    box-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+}
+
+label {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d3436;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#output {
+    background-color: #f1f2f6;
+    border-style: dashed;
+}
+
+.footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 0 #2d3436;
+}
+
+.heart {
+    color: #ff6b6b;
+    display: inline-block;
+    animation: pulse 1.5s ease infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.pixel-corners {
+    clip-path: polygon(
+        0 10px,
+        10px 10px,
+        10px 0,
+        calc(100% - 10px) 0,
+        calc(100% - 10px) 10px,
+        100% 10px,
+        100% calc(100% - 10px),
+        calc(100% - 10px) calc(100% - 10px),
+        calc(100% - 10px) 100%,
+        10px 100%,
+        10px calc(100% - 10px),
+        0 calc(100% - 10px)
+    );
+}
